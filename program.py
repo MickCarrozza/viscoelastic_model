@@ -102,13 +102,13 @@ for step in range(0,nsteps,1):
 
     stress_n = stress_np1
     stress[step] = np.linalg.norm(stress_np1)
-    strain[step] = (step+1)*deltat
+    strain[step] = (step+1)*rate*deltat
     
     # Print results
     if ((step+1)%(nsteps/10)==0):
        print("=======================",str(int((step+1)/nsteps*100))+"% completed=====================")
-    print("Strain:",str(round(step*deltat,3)) +
-          ", Stress: " + str(round(np.linalg.norm(stress_np1),3)))
+    print("Strain:",str(round(strain[step],3)) +
+          ", Stress: " + str(round(stress[step],3)))
     
 # Plot results
 
@@ -116,7 +116,7 @@ plt.plot(strain,stress)
 plt.ylabel("Stress")
 plt.xlabel("Strain")
 plt.xlim(left=0)              # Start x-axis from 0
-plt.xlim(right=10)              # End x-axis at 10
+plt.xlim(right=20)              # End x-axis at 10
 plt.ylim(bottom=0)            # Start y-axis from 0
 plt.show()
 

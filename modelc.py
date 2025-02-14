@@ -15,6 +15,7 @@ class ModelC:
         self.__created = True
 
 #   function to check if created
+    @property
     def is_created(self):
         return self.__created
 
