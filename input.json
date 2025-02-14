@@ -1,0 +1,10 @@
+{
+    "modelnr": 2,
+    "Gmod": 1,
+    "lamb": 1,
+    "alpha": 0.1,
+    "flownr": 1,
+    "rate": 2.5,
+    "deltat": 1e-3,
+    "nsteps": 10000
+}
